@@ -8,6 +8,7 @@ cypress/screenshots
 cypress/videos
 cypress/reports
 cypress/results
+cypress/downloads
 
 # Logs
 logs
