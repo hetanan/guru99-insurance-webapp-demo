@@ -3,7 +3,7 @@ import registerPage from "../pages/registerPage" // import the registerPage clas
 // improvement suggestion
 // convert harcoded value into dynamic value
 
-describe('Load webapplication - Guru99 Insurance', () => {
+describe('Load webapplication & Register user - Guru99 Insurance', () => {
 
   beforeEach(() => {
     cy.visit('https://demo.guru99.com/insurance/v1/index.php')
