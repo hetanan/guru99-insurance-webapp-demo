@@ -23,7 +23,7 @@ class registerPage {
     }
 
     selectTitle() {
-        this.locators.titleSelection().select('Doctor').invoke('val').should('equal', 'Doctor')
+        this.locators.titleSelection().select('Doctor').should('have.value', 'Doctor')
     }
 
     enterFirstName() {

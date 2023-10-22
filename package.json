@@ -6,12 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:run": "npx cypress run",
-    "cypress:open": "npx cypress open"
+    "cypress:open": "npx cypress open",
+    "precy:run": "rm -rf cypress/screenshots cypress/results cypress/reports cypress/videos",
+    "report:merge": "npx mochawesome-merge cypress/results/json/mochawesome-report/*.json -o cypress/results/mochawesome-bundle.json",
+    "report:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/reports/html"
+    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.3.2"
+    "cypress": "^13.3.2",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
   }
 }

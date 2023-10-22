@@ -1,5 +1,6 @@
 import profilePage from '../pages/profilePage'
 import loginPage from '../pages/loginPage'
+import registerPage from '../pages/registerPage'
 
 describe('Load user profile', () => {
     
@@ -14,5 +15,14 @@ describe('Load user profile', () => {
             profilePage.clickProfileTab()
             cy.url().should('include', '/insurance/v1/header.php')
             profilePage.verifyUserTitle()
+        })
+ 
+        //Above it block is failling once that is fixed test to be enabled
+        it.skip('Edit user profile', () => {
+            profilePage.clickEditProfileTab()
+            cy.url().should('include', '/insurance/v1/header.php')
+            registerPage.locators.titleSelection().should('be.visible')
+            registerPage.locators.titleSelection().select('Captain').invoke('val').should('equal', 'Captain')
+            profilePage.clickUpdateProfileButton()
         })
 })

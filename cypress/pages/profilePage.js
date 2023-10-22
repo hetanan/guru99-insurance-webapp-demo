@@ -1,16 +1,26 @@
 class profilePage {
 
     locators = {
-        profiletab: () => cy.get('#profile'),
-        userTitel: () => cy.get('#showtitle')
+        profileTab: () => cy.get('#profile'),
+        userTitle: () => cy.get('#showtitle'),
+        editProfiletab: () => cy.get('#editprofile'),
+        updateProfileButton: () => cy.get('input[name="commit"]')
     }
 
     clickProfileTab() {
-        this.locators.profiletab().click()
+        this.locators.profileTab().click()
     }
 
     verifyUserTitle() {
-        this.locators.userTitel().should('have.text', 'Doctor')
+        this.locators.userTitle().should('have.text', 'Doctor')
+    }
+
+    clickEditProfileTab() {
+        this.locators.editProfiletab().click()
+    }
+
+    clickUpdateProfileButton() {
+        this.locators.updateProfileButton().click()
     }
 }
 
