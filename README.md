@@ -80,3 +80,9 @@ In this repo:
 3. Add CI/CD capabilities
 4. Incorporate cypres env variables/file to store credentials
 5. Add more reusable functions and commands
+
+# Tools one can use to improve code quality
+
+1. Introducing linting tools such as eslint
+2. Introducing code coverage tools
+3. Introducing AI tool such as copilot to improve code quality
